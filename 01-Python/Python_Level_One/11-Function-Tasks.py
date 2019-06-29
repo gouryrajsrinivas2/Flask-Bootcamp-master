@@ -15,9 +15,13 @@
 
 def check_ten(n1,n2):
     # Code Here
-    pass
+    sums=sum([n1,n2])
+    if(sums==10):
+        return True
+    else:
+        return False
 
-
+#print(check_ten(4,5))
 
 # ## Task 2
 #
@@ -26,7 +30,13 @@ def check_ten(n1,n2):
 
 def check_ten_sum(n1,n2):
     # Code Here
-    pass
+    sums=sum([n1,n2])
+    if(sums==10):
+        return True
+    else:
+        return sums
+
+    
 
 
 
@@ -39,6 +49,9 @@ def check_ten_sum(n1,n2):
 
 def first_upper(mystring):
     # Code Here
+    return mystring.upper()[0]
+
+#print (first_upper("sri"))
 
 
 
@@ -53,7 +66,12 @@ def first_upper(mystring):
 
 def last_two(mystring):
     # Code Here
-    pass
+    if(len(mystring)<2):
+        return "Error"
+    else:
+        return mystring[-2:]
+
+#print(last_two("hi"))
 
 
 # ## Task 5
@@ -66,8 +84,13 @@ def last_two(mystring):
 def seq_check(nums):
 
     # Code here
+    seq=[1,2,3]
+    for i in range(len(nums)-2):
+        temp=nums[i:i+3]
+        if(temp==seq):
+            return True
 
-    pass
+print(seq_check([2,6,8,1,2,8,9,1,2,4]))
 
 
 # ## Task 6
@@ -80,9 +103,9 @@ def seq_check(nums):
 
 def compare_len(s1,s2):
     # Code Here
-    pass
+    return abs(len(s1)-len(s2))
 
-
+#print(compare_len("sri","nivas"))
 
 # ## Task 7
 #
@@ -95,4 +118,8 @@ def compare_len(s1,s2):
 def sum_or_max(mylist):
 
     # Code Here
-    pass
+    if(len(mylist)%2==0):
+        return sum(mylist)
+    else:
+        return max(mylist)
+#print(sum_or_max([1,2,1]))

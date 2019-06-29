@@ -14,15 +14,15 @@ s = 'flask'
 
 # Use indexing to print out the following:
 # 'f'
-
+print(s[0])
 # 's'
-
+print(s[3])
 # 'ask'
-
+print(s[2:])
 # 'las'
-
+print(s[1:4])
 # 'k'
-
+print(s[-1])
 # Bonus: Use indexing to reverse the string
 
 
@@ -34,7 +34,8 @@ s = 'flask'
 mylist = [3,7,[1,4,'hello']]
 # Reassign "hello" to be "goodbye"
 
-
+mylist[2][2]='goodbye'
+print(mylist)
 ###############
 ## Problem 3 ##
 ###############
@@ -47,6 +48,9 @@ d2 = {'k1':{'k2':'hello'}}
 
 d3 = {'k1':[{'nest_key':['this is deep',['hello']]}]}
 
+print(d1['simple_key'])
+print(d2['k1']['k2'])
+print(d3['k1'][0]['nest_key'][1][0])
 
 ###############
 ## Problem 4 ##
@@ -55,6 +59,7 @@ d3 = {'k1':[{'nest_key':['this is deep',['hello']]}]}
 # Use a set to find the unique values of the list below:
 mylist = [1,1,1,1,1,2,2,2,2,3,3,3,3]
 
+print(set(mylist))
 
 ###############
 ## Problem 5 ##
@@ -66,3 +71,4 @@ name = "Sammy"
 
 # Use print formatting to print the following string:
 "Hello my dog's name is Sammy and he is 4 years old"
+print(f"Hello my dog's name is {name} and he is {age} years old")
