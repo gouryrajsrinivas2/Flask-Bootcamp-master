@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+        {% extends "exercise_base_page.html"%}
+        {% block content %}
+
+        <div class="jumbotron">
+            <h2>Welcome to puppy username check</h2>
+            <h2>fill out ...</h2>
+            <ul>
+                <li>uppercase</li>
+                <li>lowercase</li>
+                <li>number</li>
+            </ul>
+            <form action="{{url_for('report')}}" >
+                <label for="first" >Username</label>
+                <input type="text" name="first">
+                <input type="submit" value="some">
+            </form>
+        </div>
+        {% endblock %}
+

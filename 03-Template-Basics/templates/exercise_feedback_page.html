@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+        {% extends "exercise_base_page.html"%}
+        {% block content %}
+            <div class="jumbotron">
+              
+                <ul>
+                    {% if(uppercase==False) %}
+                    <li>must have an uppercase letter</li>
+                    {% endif %}
+                    {% if(lowercase==False) %}
+                    <li>must have an lowercase letter</li>
+                    {% endif %}
+                    {% if(lastdigit==False) %}
+                    <li>must have a lastdigit</li>
+                    {% endif %}
+                </ul>
+                {% if((uppercase and lowercase) and lastdigit)%}
+                <p>all done</p>
+                {% endif %}
+                
+
+
+            </div>
+        {% endblock %}
+
+        
+        
